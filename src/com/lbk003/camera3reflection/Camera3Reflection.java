@@ -1,3 +1,18 @@
+/*******************************************************************************
+ * Copyright 2013 Balwinder Kaur
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ ******************************************************************************/
 package com.lbk003.camera3reflection;
 
 import com.example.camera3demo.R;
@@ -10,10 +25,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * This class uses reflection to determine if the hidden camera 3 apis are available on the device or not.
+ * @author bkaur
+ *
+ */
+
 public class Camera3Reflection extends Activity {
 	private TextView mMessage;
 	private Button mBtn;
 	private static final String TAG = "Camera3Demo";
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +44,6 @@ public class Camera3Reflection extends Activity {
 		mMessage = (TextView)findViewById(R.id.message);
 		mBtn = (Button)findViewById(R.id.classinfo);
 		mBtn.setOnClickListener(new View.OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
 				mMessage.append(getResult());
@@ -31,14 +52,20 @@ public class Camera3Reflection extends Activity {
 		});
 		
 	}
-
+	
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.camera3_demo, menu);
 		return true;
 	}
 
+	
+	/**
+	 * Returns a text string that specifies whether the hidden camera 3 apis are found or not. Formatted for direct display in a textview widget
+	 * @return result
+	 */
 	private String getResult(){
 		StringBuffer sbuf = new StringBuffer();
 		String sClasses[][]= { 
