@@ -25,4 +25,4 @@ In Eclipse, Project → Properties → Java Build Path → Libraries → Add Ext
 Source : http://stackoverflow.com/questions/7888191/how-do-i-build-the-android-sdk-with-hidden-and-internal-apis-available
 
 
-Presentation: http://www.slideshare.net/lbk003/an-devcon2013-camera3kaurfinal
+Power Point Presentation: http://www.slideshare.net/lbk003/an-devcon2013-camera3kaurfinal
