@@ -9,15 +9,15 @@ To setup the Development Environment to actually use the hidden APIs:
 
 Connect KitKat Device or start KitKat AVD
 
-adb pull /system/framework/core.jar .
+    adb pull /system/framework/core.jar .
 
-adb pull /system/framework/framework.jar .
+    adb pull /system/framework/framework.jar .
 
 Convert from Dex to Jar using tool such as dex2jar
 
-dex2jar core.jar
+    dex2jar core.jar
 
-dex2jar framework.jar
+    dex2jar framework.jar
 
 In Eclipse, Project → Properties → Java Build Path → Libraries → Add External JARs... → core-dex2jar.jar & framework-dex2jar.jar 
 
