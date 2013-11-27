@@ -13,7 +13,7 @@ Connect KitKat Device or start KitKat AVD
 
     adb pull /system/framework/framework.jar .
 
-Convert from Dex to Jar using tool such as dex2jar
+Convert from Dex to Jar using tool such as dex2jar https://code.google.com/p/dex2jar/
 
     dex2jar core.jar
 
